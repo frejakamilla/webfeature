@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const images = await Astro.glob("/src/assets/images/galleri/*").then((files) => {
+  return files.map((file) => file.default);
+});
+---
+
+<BaseLayout title="Forside">
+  <main></main>
+</BaseLayout>
+
+<style>
+  /*Animationer  */
+
+  /*Hero */
+
+  /*Keyframes */
+</style>
+
+<script>
+  import { gsap } from "gsap/dist/gsap";
+  import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+</script>
