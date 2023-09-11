@@ -12,6 +12,7 @@
   /* Farver */
   --offBlack: #262623;
   --offWhite: #f4ecd6;
+  --dymoGray: #d9d9d9;
 }
 
 /* ********** Typografi ********** */
@@ -51,7 +52,11 @@ p {
   font-size: 70px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 40px;
+  background-color: var(--dymoGray);
+  width: fit-content;
+  height: 45px;
+  text-align: center;
 }
 /* Til sort paragraftekst */
 .text_black {
