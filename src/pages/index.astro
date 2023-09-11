@@ -1,147 +1,33 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Filmrulle from "../components/Filmrulle.astro";
+import Hero from "../components/Hero.astro";
+import Facts from "../components/Facts.astro";
+import WavyImg from "../components/WavyImg.astro";
+import AboutPierre from "../components/AboutPierre.astro";
+import StockFotoInfo from "../components/StockFotoInfo.astro";
+import StockFotos from "../components/StockFotos.astro";
+import PierreBerommelse from "../components/PierreBerommelse.astro";
+import Skillevej from "../components/Skillevej.astro";
+import NyBegyndelse from "../components/NyBegyndelse.astro";
+import FotoStilarter from "../components/FotoStilarter.astro";
 ---
 
 <BaseLayout title="Forside">
   <main>
-    <!-- ********* Hero ********** -->
-    <h1>Uperfekt er perfekt</h1>
-    <h2 class="dymo">Pierre falcke.</h2>
-
-    <!-- ********** 3 facts ********** -->
-    <p class="factText">Pierre sælger 2 millioner fotos om året.</p>
-    <p class="factText">Du ser hans fotos ca. 2 gange om dagen.</p>
-    <p class="factText">Det svarer til én fotolicens hvert 16. sekund.</p>
-
-    <!-- ********** Intro ********** -->
-    <p class="dymo">Pierre Falcke.</p>
-    <p>
-      Du ved formentligt ikke hvem han er. <br /><br />
-      Men indtil for kort tid siden, så du hans værker et par gange om dagen, hver dag, året rundt.<br /><br />
-      Pierre Falcke var en af verdens bedst sælgende stock-fotografer, og han solgte over 2 millioner fotos om året.<br /><br />
-      Men Pierre kunne ikke drømme om at bruge sine egne fotos - faktisk kan han ikke fordrage sit eget arbejde.
-    </p>
-
-    <!-- ********** Stock-fotos ********** -->
-    <h3 class="dymo">Hvad|er<br />Stock-fotos?</h3>
-    <p class="text_on_paper">
-      Stock-fotos er billeder, der kan købes fra et foto-website. De bruges af aviser, til markedsføring og som indhold på websites. En licens til at bruge et foto koster typisk mellem 10 og 100 kroner, alt afhængig af hvad de skal bruges til.<br
-      /><br />
-      Stock-fotos bliver ofte kritiseret for at være uden sjæl - det er de der billeder af en læge i hvid kittel med stetoskop om halsen på en meget hvid baggrund eller en meget glad dame fra virksomhedens salgs- eller supportafdeling.<br /><br
-      />Stock-fotos har eksisteret i mange år. Før branchen blev digital, tilbød stock-foto virksomhederne billedmapper, der kunne bestilles fra. Men stock-foto branchen var én af de tidlige til at blive fuldt digitaliseret.
-    </p>
-    <!-- stock-foto her -->
-    <!-- stock-foto her -->
-    <!-- stock-foto her -->
-
-    <!-- ********** Pierres Berømmelse ********** -->
-    <h3 class="dymo">Pierres|berømmelse</h3>
-    <p>
-      Pierres interesse for foto startede som ganske ung - som 10-årig fik han sin fars gamle Rollei-kamera, og begyndte at skyde løs. Det var før den digitale revolution, så alle Pierres lommepenge blev brugt på filmruller og fremkaldelse af film.
-      Pierre fortsatte med at fotografere på film op gennem gymnasietiden.
-    </p>
-    <!-- poloraid-billede her -->
-    <!-- poloraid-billede her -->
-    <p id="2010" class="dymo">2010</p>
-    <p>
-      Pierre over til digital fotografering i starten af 2000’erne, da han begyndte at studere fotografisk kommunikation på DMJX. Her åbnede en ny verden sig: Reklamefotografering i studie, lyssætning og manipulering af billeder i Photoshop blev hans
-      nye stil. På det tidspunkt var stock-foto industrien i starten af en revolution: De første online stock-foto websites begyndte at komme på markedet, men de store, etablerede spillere på markedet holdt lidt igen.
-    </p>
-    <p>
-      Så Pierre gav sig selv en udfordring: At blive landets bedst sælgende stock-fotograf. Pierre lejede et gammelt, billigt erhvervslokale i Ishøj industri, fik fløjet billige skuespillere ind fra Polen og Baltikum, og fotograferede 10 timer om
-      dagen. Pierres profeti om stock-foto branchen holdt stik. Pierre var allerede en af landets bedst sælgende stock-fotografer, før han blev færdig med studiet på DMJX.
-    </p>
-
-    <!-- ********** En skillevej ********** -->
-    <h3>en|skillevej</h3>
-    <p>
-      Pierre tjente godt det følgende årti. Men stille og roligt begyndte billederne også at give ham kvalme. Han kunne ikke holde sit eget arbejde ud, og måtte finde et modsvar til alle de blankpolerede fotos. Noget han kunne lave med stolthed.
-      Pierre bestluttede sig for at droppe stock-fotos, og vende tilbage til rødderne.<br /><br />
-
-      Han søgte inspiration i analog fotografering, i Lomo-bevægelsen, Glitch art og polaroid fotografering, og begyndte stille og roligt at skabe sig en ny stil - en stil med fokus på det uperfekte, og hvor der er et uforudsigeligt element i det at
-      tage billeder.<br /><br />
-
-      Pierre tog det endda så vidt at han ikke kun droppede at tage stock-fotos. Han fjernede også alle stock-fotos fra de tjenester, han solgte sine fotos hos. Han gik fra at være en god forretningsdrivende til at blive en vaskeægte boheme-type på
-      rekordtid.
-    </p>
-
+    <Hero />
+    <Facts />
+    <WavyImg />
+    <AboutPierre />
+    <StockFotoInfo />
+    <StockFotos />
+    <PierreBerommelse />
+    <Skillevej />
     <Filmrulle />
-
-    <!-- ********** En ny begyndelse ********** -->
-    <h3 class="dymo">En|ny|begyndelse</h3>
-    <p>
-      Men Pierre er glad for sin beslutning. Indkomsten er lavere nu, men han har stadig lidt penge på kontoen, og studerer nu kunstfotografering på fotoskolen Fatamorgana. Han glæder sig over hver dags kunstneriske eksperimenter, og er for første
-      gang i sit liv rigtig stolt af sit arbejde. Som Pierre selv udtrykker det: “Det interessante ligger i fejlen. Et foto med masser af fejl er interessant. Jeg eksperimenterer med udstyr og teknik, og skaber nye visuelle udtryk. Det uperfekte er
-      perfekt.”
-    </p>
-    <!-- billede her -->
-    <p>
-      Karrieren begynder også så småt også at gå den rette vej: Pierre er begyndt at sælge fotokunst på nettet, og har udgivet sin første foto-bog med titlen “Lidt i fem,” som er en fotografisk odyssé om at slæbe en brandert hjem i de tidlige
-      morgentimer. I forbindelse med udgivelsen af bogen, har han en udstilling på vej i det Kongelige Biblioteks fotoudstilling.
-    </p>
-    <!-- billede her -->
-    <!-- citat her-->
-
-    <!-- ********** Fotograferins stilarter ********** -->
-    <!-- ***** Analog 1 **** -->
-    <p>
-      Analog fotografering<br /><br />
-      Fotografering med gode, gammeldags filmruller. Analog fotografering stiger for tiden i popularitet, specielt blandt unge, og prisen på filmruller og vintage-kameraer skyder i vejret.<br /><br />
-      Mange fotografer synes at film-fotografering er mere ægte har mere “sjæl.” Analog fotografering er langsommmere, hvert enkelt billede koster penge, og man bliver nødt til at overveje motiv og lys grundigere før der skydes - tænk før du trykker.
-    </p>
-    <!-- poloraid-billede her -->
-    <!-- poloraid-billede her -->
-
-    <!-- ***** Analog 2 **** -->
-    <p>
-      Analog fotografering kan gå galt mange steder i processen, og det giver også mulighed for at eksperimentere med “det uperfekte og uforudsigelige i processen.”<br /><br /> Man kan f.eks. skyde på for gamle filmruller, arbejde med forskellige teknikker
-      som “lens whacking” og filtre/ting foran objektivet, og man kan pille ved de kemiske processer under fremkaldelse af filmen.
-    </p>
-    <!-- poloraid-billede her -->
-
-    <!-- ***** Glitch art **** -->
-    <p>
-      Glitch art Når der sker en teknisk fejl i et medie/en kommunikationskanal kaldes det en glitch. Glitch art går ud på at dyrke fejlene for at skabe kunst. En meget typisk glitch er små analoge eller digitale fejl i farvegengivelsen af billeder.
-    </p>
-    <!-- poloraid-billede her -->
-
-    <!-- ***** lomografi **** -->
-    <p>
-      Lomografi Et lomografi er egentlig bare et fotografi skudt uden videre omtanke, og med noget foto-udstyr af ret alternativ kvalitet. Lomografier skydes ofte på gode, gammeldags filmruller, men kan også skyde digitalt. Det kan måske lyde lidt
-      anti-fotograf-agtigt. Men en del foto-entusiaster dyrker den slags, og ser det som en foto-genre eller endda en livsstil.
-    </p>
-    <!-- poloraid-billede her -->
-    <!-- poloraid-billede her -->
-
-    <!-- ***** Lomo-regler **** -->
-    <p>
-      Lomo-regler<br /><br />
-      Der er et stort community af lomografer på Lomography.com, og hardcore lomografer har 10 regler, de lever efter:<br /><br />
-    </p>
-    <ol>
-      <li>Tag kameraet med overalt</li>
-      <li>Brug det på alle tidspunkter – dag og nat</li>
-      <li>Lomografi er ikke en forstyrrelse af dit liv, men en del af det</li>
-      <li>Prøv hofteskuddet!</li>
-      <li>Gå tæt på de objekter du har et ønske om at lomografere</li>
-      <li>Tænk ikke (William Firebrace)</li>
-      <li>Vær hurtig</li>
-      <li>Du behøver ikke at vide hvad du fanger på film på forhånd</li>
-      <li>Heller ikke efter</li>
-      <li>Du skal ikke bekymre dig om nogen regler</li>
-    </ol>
-    <p>Se lomography.com/about/the-ten-golden-rules for yderligere info</p>
+    <NyBegyndelse />
+    <FotoStilarter />
   </main>
 </BaseLayout>
-
-<style>
-  /*Animationer  */
-
-  /*Hero */
-
-  /*Keyframes */
-</style>
 
 <script>
   import { gsap } from "gsap/dist/gsap";
