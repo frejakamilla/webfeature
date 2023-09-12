@@ -3,9 +3,9 @@
 
 <section id="stockFotos">
   <div id="img_container">
-    <img src="../../public/assets/stockimg/stock1.webp" alt="et stockfoto ved navn sammenhold, af fire hænder der holder hinandens håndled" class="vertical" id="sammenhold" />
     <img src="../../public/assets/stockimg/stock2.webp" alt="et stockfoto ved navn arbejde, af to kvinder ved en bærbarcomputer" class="horizontal" id="arbejde1" />
     <img src="../../public/assets/stockimg/stock3.webp" alt="et stockfoto ved navn arbejde, af en gruppe kollegaer omkring en bærbarcomputer" class="horizontal" id="arbejde2" />
+    <img src="../../public/assets/stockimg/stock1.webp" alt="et stockfoto ved navn sammenhold, af fire hænder der holder hinandens håndled" class="vertical" id="sammenhold" />
   </div>
 </section>
 <style>
@@ -16,10 +16,12 @@
     justify-content: center;
     align-items: center;
     border: 1px cyan dotted;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
   #img_container {
-    width: 66%;
+    width: 60%;
     height: 66%;
+    position: relative;
   }
   .horizontal {
     width: 30vw;
@@ -27,15 +29,29 @@
   .vertical {
     height: 30vw;
   }
+  img {
+    position: absolute;
+  }
 
   #sammenhold {
     transform: rotate(-5.803deg);
+    right: 0;
+    top: 20%;
   }
   #arbejde1 {
     transform: rotate(-3.167deg);
+    bottom: 0;
   }
 
   #arbejde2 {
     transform: rotate(7.004deg);
+    top: 0;
+    left: 20%;
   }
+
+  /* @media (min-width: 900px;) {
+    #stockFotos {
+      height: 900px;
+    }
+  } */
 </style>
