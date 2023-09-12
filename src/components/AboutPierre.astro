@@ -5,8 +5,8 @@ import PolaridPierre from "../components/PolaridPierre.astro";
 <!-- ********** Intro ********** -->
 <section>
   <div class="about-text">
-    <p class="dymo">Pierre|Falcke.</p>
-    <p>
+    <p class="dymo h2">Pierre|Falcke.</p>
+    <p class="text">
       Du ved formentligt ikke hvem han er. <br /><br />
       Men indtil for kort tid siden, så du hans værker et par gange om dagen, hver dag, året rundt.<br /><br />
       Pierre Falcke var en af verdens bedst sælgende stock-fotografer, og han solgte over 2 millioner fotos om året.<br /><br />
@@ -25,22 +25,43 @@ import PolaridPierre from "../components/PolaridPierre.astro";
     gap: 3rem;
     padding-left: 5rem;
     padding-right: 5rem;
+    margin: 2rem;
   }
 
   .about-text {
+    padding-top: 8rem;
     margin: 3rem;
+  }
+
+  .h2 {
+    margin-bottom: 2.5rem;
+    transform: rotate(-5deg);
+  }
+
+  .text {
+    padding-left: 3rem;
   }
 
   @media only screen and (max-width: 600px) {
     section {
       display: flex;
       flex-direction: column;
-      padding-left: 5rem;
-      padding-right: 5rem;
+      padding-left: 0;
+      padding-right: 0;
+      margin: 1rem;
     }
 
     .about-text {
       margin: 1rem;
+    }
+
+    .h2 {
+      margin-bottom: 2.5rem;
+      transform: rotate(-5deg);
+    }
+
+    .text {
+      padding-left: 1rem;
     }
   }
 </style>
