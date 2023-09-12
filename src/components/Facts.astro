@@ -1,4 +1,80 @@
 <!-- ********** 3 facts ********** -->
-<p class="factText">Pierre sælger 2 millioner fotos om året.</p>
-<p class="factText">Du ser hans fotos ca. 2 gange om dagen.</p>
-<p class="factText">Det svarer til én fotolicens hvert 16. sekund.</p>
+<div class="factbox1">
+  <p class="factText">Pierre sælger 2 millioner fotos om året.</p>
+  <div class="vid1">
+    <video class="background-video" autoplay loop muted>
+      <source src="/assets/vids/fact1.mp4" type="video/mp4" />
+    </video>
+  </div>
+</div>
+
+<div class="factbox2">
+  <p class="factText">Du ser hans fotos ca. 2 gange om dagen.</p>
+  <div class="vid2">
+    <video class="background-video" autoplay loop muted>
+      <source src="/assets/vids/fact2.mp4" type="video/mp4" />
+    </video>
+  </div>
+</div>
+
+<div class="factbox3">
+  <p class="factText">Det svarer til én fotolicens hvert 16. sekund.</p>
+  <div class="vid3">
+    <video class="background-video" autoplay loop muted>
+      <source src="/assets/vids/fact3.mp4" type="video/mp4" />
+    </video>
+  </div>
+</div>
+
+<style>
+  .factText {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    height: 100vh;
+  }
+
+  .vid1 {
+    z-index: -1;
+    opacity: 0;
+  }
+  .vid2 {
+    z-index: -2;
+    opacity: 0;
+  }
+  .vid3 {
+    z-index: -3;
+    opacity: 0;
+  }
+
+  .factbox {
+  }
+
+  .background-video {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-x: hidden;
+  }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<script>
+  import { gsap } from "gsap";
+  gsap.registerPlugin(ScrollTrigger);
+
+  let st = ScrollTrigger.create({
+    trigger: ".vid3",
+    markers: true,
+    start: "opacity 1",
+    end: "opacity 0",
+    pin: ".vid3",
+    scrub: 1,
+  });
+</script>
