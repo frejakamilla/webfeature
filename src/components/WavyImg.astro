@@ -1,0 +1,65 @@
+---
+---
+
+<section class="midlertidig" id="WavyImg">
+  <div id="PierreImgContainer">
+    <img src="../../public/assets/pierre/pierre1.webp" alt="Billede af Pierre Falcke" id="PierreImg" />
+    <div id="gradient"></div>
+  </div>
+  <div id="shadows">
+    <img src="../../public/assets/pierre/upper_shadow.svg" alt="" id="upper_shadow" class="shadow" />
+    <img src="../../public/assets/pierre/lower_shadow.svg" alt="" id="lower_shadow" class="shadow" />
+  </div>
+</section>
+
+<style>
+  #WavyImg {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  img {
+    width: 100%;
+  }
+  #PierreImgContainer {
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  #gradient {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(38, 38, 35, 0.82) 22.92%, rgba(38, 38, 35, 0.81) 34.38%, rgba(38, 38, 35, 0.52) 49.48%, rgba(38, 38, 35, 0.42) 68.23%, rgba(38, 38, 35, 0.79) 84.9%), lightgray 50% / cover no-repeat;
+
+    grid-area: 1/2/1/2;
+  }
+  #PierreImg {
+    height: 100%;
+    width: 100%;
+    filter: blur(2.5px);
+
+    grid-area: 1/2/1/2;
+  }
+  /* sorte skygger over billedet */
+  #shadows {
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+
+    grid-area: 1/2/1/2;
+  }
+
+  .shadow {
+    height: 10vh;
+    width: 100%;
+  }
+
+  .midlertidig {
+    outline: 2px cyan dotted;
+  }
+</style>
+
+<script></script>
