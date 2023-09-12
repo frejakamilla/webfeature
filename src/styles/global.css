@@ -7,6 +7,10 @@
   font-family: "Roboto Mono", monospace;
 }
 
+* {
+  margin: 0;
+}
+
 /* ********** Variabler ********** */
 :root {
   /* Farver */
@@ -19,7 +23,7 @@
 
 h1 {
   color: var(--offWhite);
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 100px;
   font-style: normal;
   font-weight: 700;
@@ -29,7 +33,7 @@ h1 {
 p {
   color: var(--offWhite);
   /* RobotoMono/Medium */
-  font-family: Roboto Mono;
+  font-family: "Roboto Mono", monospace;
   font-size: 21.875px;
   font-style: normal;
   font-weight: 400;
@@ -38,7 +42,7 @@ p {
 
 .factText {
   color: var(--offWhite);
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 70px;
   font-style: normal;
   font-weight: 700;
@@ -66,7 +70,7 @@ p {
 /* Til tekst oven på ternet papit */
 .text_on_paper {
   color: var(--offBlack);
-  font-family: Roboto Mono;
+  font-family: "Roboto Mono", monospace;
   font-size: 21px;
   font-style: normal;
   font-weight: 400;
