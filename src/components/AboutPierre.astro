@@ -1,8 +1,46 @@
+---
+import PolaridPierre from "../components/PolaridPierre.astro";
+---
+
 <!-- ********** Intro ********** -->
-<p class="dymo">Pierre|Falcke.</p>
-<p>
-  Du ved formentligt ikke hvem han er. <br /><br />
-  Men indtil for kort tid siden, så du hans værker et par gange om dagen, hver dag, året rundt.<br /><br />
-  Pierre Falcke var en af verdens bedst sælgende stock-fotografer, og han solgte over 2 millioner fotos om året.<br /><br />
-  Men Pierre kunne ikke drømme om at bruge sine egne fotos - faktisk kan han ikke fordrage sit eget arbejde.
-</p>
+<section>
+  <div class="about-text">
+    <p class="dymo">Pierre|Falcke.</p>
+    <p>
+      Du ved formentligt ikke hvem han er. <br /><br />
+      Men indtil for kort tid siden, så du hans værker et par gange om dagen, hver dag, året rundt.<br /><br />
+      Pierre Falcke var en af verdens bedst sælgende stock-fotografer, og han solgte over 2 millioner fotos om året.<br /><br />
+      Men Pierre kunne ikke drømme om at bruge sine egne fotos - faktisk kan han ikke fordrage sit eget arbejde.
+    </p>
+  </div>
+  <div class="polarid-fotos">
+    <PolaridPierre />
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .about-text {
+    margin: 3rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    section {
+      display: flex;
+      flex-direction: column;
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+
+    .about-text {
+      margin: 1rem;
+    }
+  }
+</style>
