@@ -37,21 +37,97 @@
     transform: rotate(-5.803deg);
     right: 0;
     top: 20%;
+
+    -webkit-animation: slide-in-tr 1s ease-in both;
+    animation: slide-in-tr 1s ease-in both;
   }
   #arbejde1 {
     transform: rotate(-3.167deg);
     bottom: 0;
+
+    -webkit-animation: slide-in-bl 1s ease-in both;
+    animation: slide-in-bl 1s ease-in both;
   }
 
   #arbejde2 {
     transform: rotate(7.004deg);
     top: 0;
     left: 20%;
+
+    -webkit-animation: slide-in-tl 1s ease-in both;
+    animation: slide-in-tl 1s ease-in both;
   }
 
-  /* @media (min-width: 900px;) {
-    #stockFotos {
-      height: 900px;
+  @-webkit-keyframes slide-in-tr {
+    0% {
+      -webkit-transform: translateY(-1000px) translateX(1000px);
+      transform: translateY(-1000px) translateX(1000px);
+      opacity: 0;
     }
-  } */
+    100% {
+      -webkit-transform: translateY(0) translateX(0);
+      transform: translateY(0) translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-tr {
+    0% {
+      -webkit-transform: translateY(-1000px) translateX(1000px);
+      transform: translateY(-1000px) translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) translateX(0);
+      transform: translateY(0) translateX(0);
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes slide-in-tl {
+    0% {
+      -webkit-transform: translateY(-1000px) translateX(-1000px);
+      transform: translateY(-1000px) translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) translateX(0);
+      transform: translateY(0) translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-tl {
+    0% {
+      -webkit-transform: translateY(-1000px) translateX(-1000px);
+      transform: translateY(-1000px) translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) translateX(0);
+      transform: translateY(0) translateX(0);
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes slide-in-bl {
+    0% {
+      -webkit-transform: translateY(1000px) translateX(-1000px);
+      transform: translateY(1000px) translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) translateX(0);
+      transform: translateY(0) translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-bl {
+    0% {
+      -webkit-transform: translateY(1000px) translateX(-1000px);
+      transform: translateY(1000px) translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) translateX(0);
+      transform: translateY(0) translateX(0);
+      opacity: 1;
+    }
+  }
 </style>
