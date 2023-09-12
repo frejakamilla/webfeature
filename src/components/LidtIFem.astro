@@ -1,1 +1,115 @@
 <!-- billede her --><!-- citat her-->
+<section>
+  <div class="paper-citat">
+    <img class="paper" src="/public/assets/paper/paper-lidt-i-fem.png" alt="" />
+    <p class="citat text_on_paper">“Nu kan jeg leve livet igen. Jeg føler mig frisk. Jeg føler mig fri. Jeg føler mig genfødt.” - Pierre Falcke</p>
+  </div>
+
+  <div>
+    <img class="foto-1" src="/public/assets/li5/mcd.webp" alt="" />
+    <img class="foto-2" src="/public/assets/li5/nih.webp" alt="" />
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: row;
+    padding-top: 15rem;
+    align-items: center;
+  }
+  .paper-citat {
+    position: relative;
+    text-align: center;
+  }
+  .citat {
+    position: absolute;
+    top: 32%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    transform: rotate(-10deg);
+    z-index: 4;
+    font-family: "Nothing You Could Do", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3rem;
+    width: 18rem;
+  }
+  .paper {
+    width: 700px;
+    height: auto;
+    transform: rotate(-10deg);
+    position: relative;
+    top: -5%;
+    left: 150px;
+    z-index: 2;
+  }
+  .foto-1 {
+    transform: rotate(5deg);
+    width: 500px;
+    height: auto;
+    z-index: 1;
+  }
+
+  .foto-2 {
+    transform: rotate(2deg);
+    width: 500px;
+    height: auto;
+    position: relative;
+    top: -110px;
+    left: -45px;
+    z-index: 3;
+  }
+
+  @media only screen and (max-width: 600px) {
+    section {
+      display: flex;
+      flex-direction: column-reverse;
+      padding-top: 6rem;
+      align-items: center;
+      margin: 3rem;
+    }
+    .paper-citat {
+      position: relative;
+      text-align: center;
+    }
+    .citat {
+      position: absolute;
+      top: -90%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      transform: rotate(-10deg);
+      z-index: 4;
+      font-family: "Nothing You Could Do", cursive;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 0.7rem;
+      width: 10rem;
+    }
+    .paper {
+      width: 300px;
+      height: auto;
+      transform: rotate(-10deg);
+      position: relative;
+      top: -120%;
+      left: 5%;
+      z-index: 2;
+    }
+    .foto-1 {
+      transform: rotate(5deg);
+      width: 250px;
+      height: auto;
+      z-index: 1;
+    }
+
+    .foto-2 {
+      transform: rotate(3deg);
+      width: 250px;
+      height: auto;
+      position: relative;
+      top: 70px;
+      left: 5%;
+      z-index: 3;
+    }
+  }
+</style>
