@@ -1,4 +1,156 @@
 <!-- ********** 3 facts ********** -->
-<p class="factText">Pierre sælger 2 millioner fotos om året.</p>
-<p class="factText">Du ser hans fotos ca. 2 gange om dagen.</p>
-<p class="factText">Det svarer til én fotolicens hvert 16. sekund.</p>
+<div class="fact_wrap">
+  <div class="hero">
+    <h1 class="blink"><span class="text-focus-in">Uperfekt perfekt.</span></h1>
+    <video class="hero_vid" autoplay loop muted>
+      <source src="/assets/vids/herovid.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="factbox">
+    <p class="factText">Pierre sælger 2 millioner<br /> fotos om året.</p>
+    <video class="fact_vid_1" autoplay loop muted>
+      <source src="/assets/vids/fact1.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <div class="factbox">
+    <p class="factText">Du ser hans fotos<br /> ca. 2 gange om dagen.</p>
+    <video class="fact_vid_2" autoplay loop muted>
+      <source src="/assets/vids/fact2.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <div class="factbox">
+    <p class="factText">Det svarer til én<br /> fotolicens hvert 16. sekund.</p>
+    <video class="fact_vid_3" autoplay loop muted>
+      <source src="/assets/vids/fact3.mp4" type="video/mp4" />
+    </video>
+  </div>
+</div>
+
+<style>
+  p,
+  h1 {
+    z-index: 1;
+  }
+  .hero {
+    height: 100vh;
+  }
+
+  h1 {
+    text-align: end;
+    margin: 2rem;
+  }
+  video {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-x: hidden;
+  }
+  .hero_vid {
+    z-index: -1;
+  }
+  .fact_vid_1 {
+    z-index: -2;
+  }
+  .fact_vid_2 {
+    z-index: -3;
+  }
+  .fact_vid_3 {
+    z-index: -4;
+  }
+
+  .factbox {
+    height: 120vh;
+    display: flex;
+    align-items: center;
+    margin: 0 10% 0 10%;
+  }
+  .factbox:nth-child(2) {
+    margin-top: -40vh;
+  }
+  .factbox:nth-child(3) {
+    justify-content: flex-end;
+    text-align: end;
+  }
+
+  /* ********** Animation ********** */
+  .text-focus-in {
+    animation: text-focus-in 1s ease-out both;
+  }
+
+  @keyframes text-focus-in {
+    0% {
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+
+  .blink {
+    animation-name: blink;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    text-shadow: 0 0 6px var(--offWhite);
+  }
+
+  @keyframes blink {
+    100%,
+    60%,
+    70%,
+    79% {
+      opacity: 1;
+    }
+
+    65%,
+    67%,
+    76%,
+    78% {
+      opacity: 0.2;
+    }
+
+    66%,
+    69%,
+    77% {
+      opacity: 0.8;
+    }
+
+    85%,
+    97% {
+      opacity: 0;
+    }
+  }
+</style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const tl = gsap.timeline({
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".fact_wrap",
+      start: "top 200",
+      end: "bottom 10",
+      pin: "factbox",
+      scrub: 1,
+      markers: true,
+    },
+  });
+
+  tl.to(".hero_vid", { opacity: 0, delay: 1, duration: 5 })
+    .to(".fact_vid_1", { opacity: 0, delay: 1, duration: 5 })
+    .to(".fact_vid_2", { opacity: 0, delay: 1, duration: 5 })
+    .to(".fact_vid_3", { opacity: 0, delay: 1, duration: 5 });
+</script>
