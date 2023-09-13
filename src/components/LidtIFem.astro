@@ -111,3 +111,37 @@
     }
   }
 </style>
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
+    //GSAP KODE HER - Giver kun animationerne lov til at køre hvis brugeren ikke har preferencer slået til på sin computer
+    //   gsap.from(".paper", {
+    //     x: -500,
+    //     duration: 5,
+    //     scrollTrigger: ".paper",
+    //   });
+
+    //   gsap.from(".foto-1", {
+    //     x: 500,
+    //     duration: 5,
+    //     scrollTrigger: ".foto-1",
+    //   });
+    //   gsap.from(".foto-2", {
+    //     x: 500,
+    //     duration: 5,
+    //     scrollTrigger: ".foto-2",
+    //   });
+    // });
+    let tween = gsap.to(".paper", {
+      x: 100,
+      duration: 5,
+      id: "example",
+      scrollTrigger: ".trigger",
+    });
+
+    console.log(ScrollTrigger.getById("example").animation); // tween
+  });
+</script>
