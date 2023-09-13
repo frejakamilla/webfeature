@@ -66,3 +66,20 @@ import PolaridPierre from "../components/PolaridPierre.astro";
     }
   }
 </style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
+    //GSAP KODE HER - Giver kun animationerne lov til at køre hvis brugeren ikke har preferencer slået til på sin computer
+
+    gsap.from(".dymo", {
+      y: -30,
+      duration: 5,
+      id: "",
+      scrollTrigger: ".dymo",
+    });
+  });
+</script>
