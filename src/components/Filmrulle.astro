@@ -1,0 +1,46 @@
+---
+---
+
+<div class="film_wrapper">
+  <div class="film">
+    <img class="filmrulle" src="/assets/filmstrip.webp" alt="filmrulle" />
+  </div>
+</div>
+
+<style>
+  .filmrulle {
+    width: 200%;
+    overflow: visible;
+  }
+
+  .film {
+    width: 90%;
+    transform: rotate(-10deg);
+    overflow: visible;
+  }
+
+  .film_wrapper {
+    padding-top: 10%;
+    margin: 0 0 15% -10%;
+  }
+</style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to(".film_wrapper", {
+    x: -1000,
+    y: 180,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".film_wrapper",
+      start: "start 50%",
+      end: "bottom 50%",
+      scrub: 2,
+      markers: true,
+    },
+  });
+</script>
