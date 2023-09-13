@@ -6,13 +6,22 @@ import Lomografi from "./Lomografi.astro";
 import LomoRegler from "./LomoRegler.astro";
 ---
 
-<!-- ***** Analog 1 **** -->
-<Analog1 />
-<!-- ***** Analog 2 **** -->
-<Analog2 />
-<!-- ***** Glitch art **** -->
-<GlitchArt />
-<!-- ***** lomografi **** -->
-<Lomografi />
-<!-- ***** Lomo-regler **** -->
-<LomoRegler />
+<section id="fotoStilarter">
+  <div id="Carousel">
+    <Analog1 />
+    <Analog2 />
+    <GlitchArt />
+    <Lomografi />
+    <LomoRegler />
+  </div>
+</section>
+<style>
+  #fotoStilarter {
+    width: 100vw;
+    overflow: scroll;
+  }
+  #Carousel {
+    display: inline-flex;
+    overflow-x: scroll;
+  }
+</style>
