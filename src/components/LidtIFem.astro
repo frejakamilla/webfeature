@@ -58,8 +58,8 @@
     height: auto;
     z-index: 1;
     position: relative;
-    top: 5%;
-    left: -20%;
+    top: 15%;
+    left: -15%;
   }
 
   .foto-2 {
@@ -257,24 +257,24 @@
   gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
     //GSAP KODE HER - Giver kun animationerne lov til at køre hvis brugeren ikke har preferencer slået til på sin computer
 
-    let tween = gsap.from(".paper-citat .paper", {
-      x: -70,
+    let tween = gsap.from(".fotos", {
+      x: 70,
       duration: 5,
       id: "tilt-in-fwd-tl",
-      scrollTrigger: ".paper-citat",
+      scrollTrigger: ".fotos",
     });
 
     console.log(ScrollTrigger.getById("tilt-in-fwd-tl").animation); // tween
   });
 
-  let tween = gsap.from(".fotos", {
-    x: 70,
-    duration: 5,
-    id: "tilt-in-fwd-tr",
-    scrollTrigger: ".fotos",
-  });
+  // let tween = gsap.from(".fotos", {
+  //   x: 70,
+  //   duration: 5,
+  //   id: "tilt-in-fwd-tr",
+  //   scrollTrigger: ".fotos",
+  // });
 
-  console.log(ScrollTrigger.getById("tilt-in-fwd-tr").animation); // tween
+  // console.log(ScrollTrigger.getById("tilt-in-fwd-tr").animation); // tween
 
   // let tween = gsap.from(".foto-2", {
   //   x: 100,
