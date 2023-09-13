@@ -16,13 +16,12 @@ import LomoRegler from "./LomoRegler.astro";
   </div>
 </section>
 <style>
-  #fotoStilarter {
+  /* #fotoStilarter {
     width: 100vw;
     overflow-x: scroll;
-  }
+  }*/
   #Carousel {
     display: inline-flex;
-    overflow-x: scroll;
   }
 </style>
 <script>
@@ -32,22 +31,30 @@ import LomoRegler from "./LomoRegler.astro";
   gsap.registerPlugin(ScrollTrigger);
 
   const carousel = document.querySelector(".carousel") as HTMLElement | null;
-  let carouselWidth = carousel.offsetWidth;
-  let amountToScroll = carouselWidth - window.innerWidth;
+
+  // regner ud, hvor bred carousellen er,
+  // og derfor hvor lang tid der skal scrolles
+  function getScrollAmount() {
+    let carouselWidth = carousel.offsetWidth;
+    return -(carouselWidth - window.innerWidth);
+  }
 
   const tween = gsap.to(carousel, {
-    x: -amountToScroll,
+    x: getScrollAmount,
     duration: 3,
     ease: "none",
   });
 
+  // finder sektionen .fotostilarter og bebynder vandret scroll
   ScrollTrigger.create({
     trigger: ".fotoStilarter",
-    start: "top 20%",
-    end: "+=" + amountToScroll,
+    start: "top 2%",
+    end: () => `+=${getScrollAmount() * -1}`,
     pin: true,
     animation: tween,
     scrub: 1,
+    // hvis winduet genindlæses eller ændre størrelse, finder den karrusellens bredde igen
+    invalidateOnRefresh: true,
     markers: true,
   });
 </script>
