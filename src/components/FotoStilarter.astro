@@ -6,8 +6,8 @@ import Lomografi from "./Lomografi.astro";
 import LomoRegler from "./LomoRegler.astro";
 ---
 
-<section id="fotoStilarter">
-  <div id="Carousel">
+<section id="fotoStilarter" class="fotoStilarter">
+  <div id="Carousel" class="carousel">
     <Analog1 />
     <Analog2 />
     <GlitchArt />
@@ -25,3 +25,29 @@ import LomoRegler from "./LomoRegler.astro";
     overflow-x: scroll;
   }
 </style>
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const carousel = document.querySelector(".carousel") as HTMLElement | null;
+  let carouselWidth = carousel.offsetWidth;
+  let amountToScroll = carouselWidth - window.innerWidth;
+
+  const tween = gsap.to(carousel, {
+    x: -amountToScroll,
+    duration: 3,
+    ease: "none",
+  });
+
+  ScrollTrigger.create({
+    trigger: ".fotoStilarter",
+    start: "top 20%",
+    end: "+=" + amountToScroll,
+    pin: true,
+    animation: tween,
+    scrub: 1,
+    markers: true,
+  });
+</script>
