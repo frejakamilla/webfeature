@@ -1,6 +1,6 @@
 <!-- ********** Pierres Berømmelse ********** -->
 <section>
-  <h3 class="dymo">Pierres|berømmelse</h3>
+  <h3 id="h3-2" class="dymo">Pierres|berømmelse</h3>
   <p>
     Pierres interesse for foto startede som ganske ung - som 10-årig fik han sin fars gamle Rollei-kamera, og begyndte at skyde løs. Det var før den digitale revolution, så alle Pierres lommepenge blev brugt på filmruller og fremkaldelse af film.
     Pierre fortsatte med at fotografere på film op gennem gymnasietiden.
@@ -10,7 +10,7 @@
     <img class="polarid-1" src="/public/assets/polariod/pb2.webp" alt="Pierres første kamera" />
     <img class="polarid-2" src="/public/assets/polariod/pb1.webp" alt="Filmruller" />
   </div>
-  <h3 id="2010" class="dymo">2010</h3>
+  <h3 id="h3-1" class="dymo">2010</h3>
   <p>
     Pierre over til digital fotografering i starten af 2000’erne, da han begyndte at studere fotografisk kommunikation på DMJX. Her åbnede en ny verden sig: Reklamefotografering i studie, lyssætning og manipulering af billeder i Photoshop blev hans
     nye stil. På det tidspunkt var stock-foto industrien i starten af en revolution: De første online stock-foto websites begyndte at komme på markedet, men de store, etablerede spillere på markedet holdt lidt igen.
@@ -32,6 +32,7 @@
     gap: 8rem;
     margin: 2rem;
     align-items: center;
+    padding-bottom: 5rem;
   }
   .polarid-fotos {
     display: flex;
@@ -45,21 +46,29 @@
   }
 
   .polarid-1 {
-    transform: rotate(-15deg);
+    transform: rotate(-17deg);
     position: relative;
     z-index: 2;
-    top: 0;
-    left: -9%;
+    top: -25%;
+    left: -42%;
   }
 
   .polarid-2 {
-    transform: rotate(15deg);
+    transform: rotate(17deg);
     position: relative;
-    left: 9%;
+    left: 42%;
     z-index: 1;
   }
 
   p {
     width: 50rem;
+  }
+
+  #h3-1 {
+    transform: rotate(8deg);
+  }
+
+  #h3-2 {
+    transform: rotate(-5deg);
   }
 </style>
