@@ -41,6 +41,20 @@ p {
   max-width: 750px;
 }
 
+h3 {
+  color: var(--offBlack);
+  font-family: Dymo;
+  font-size: 3.3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.8rem;
+  background-color: var(--dymoGray);
+  width: fit-content;
+  height: auto;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .factText {
   color: var(--offWhite);
   font-family: "Inter", sans-serif;
