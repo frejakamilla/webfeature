@@ -2,14 +2,17 @@
 <div class="background">
   <h3 class="dymo">en|skillevej</h3>
   <p>
-    Pierre tjente godt det følgende årti. Men stille og roligt begyndte billederne også at give ham kvalme. Han kunne ikke holde sit eget arbejde ud, og måtte finde et modsvar til alle de blankpolerede fotos. Noget han kunne lave med stolthed. Pierre
-    bestluttede sig for at droppe stock-fotos, og vende tilbage til rødderne.<br /><br />
+    Pierre tjente godt det følgende årti. Men stille og roligt begyndte billederne også at give ham kvalme. Han kunne
+    ikke holde sit eget arbejde ud, og måtte finde et modsvar til alle de blankpolerede fotos. Noget han kunne lave med
+    stolthed. Pierre bestluttede sig for at droppe stock-fotos, og vende tilbage til rødderne.<br /><br />
 
-    Han søgte inspiration i analog fotografering, i Lomo-bevægelsen, Glitch art og polaroid fotografering, og begyndte stille og roligt at skabe sig en ny stil - en stil med fokus på det uperfekte, og hvor der er et uforudsigeligt element i det at
-    tage billeder.<br /><br />
+    Han søgte inspiration i analog fotografering, i Lomo-bevægelsen, Glitch art og polaroid fotografering, og begyndte
+    stille og roligt at skabe sig en ny stil - en stil med fokus på det uperfekte, og hvor der er et uforudsigeligt
+    element i det at tage billeder.<br /><br />
 
-    Pierre tog det endda så vidt at han ikke kun droppede at tage stock-fotos. Han fjernede også alle stock-fotos fra de tjenester, han solgte sine fotos hos. Han gik fra at være en god forretningsdrivende til at blive en vaskeægte boheme-type på
-    rekordtid.
+    Pierre tog det endda så vidt at han ikke kun droppede at tage stock-fotos. Han fjernede også alle stock-fotos fra de
+    tjenester, han solgte sine fotos hos. Han gik fra at være en god forretningsdrivende til at blive en vaskeægte
+    boheme-type på rekordtid.
   </p>
 </div>
 
@@ -22,7 +25,7 @@
     background-size: cover;
     padding-bottom: 2%;
     min-height: 100vh;
-    max-width: 100%;
+    width: 100%;
     background-repeat: no-repeat;
   }
 
@@ -35,6 +38,17 @@
     margin: 0 auto 0 auto;
     padding-top: 20px;
     color: var(--offBlack);
-    max-width: 715px;
+    /* max-width: 715px; */
+  }
+
+  @media (max-width: 500px) {
+    .background {
+      background-size: cover;
+      min-height: 180vh;
+    }
+
+    h3 {
+      margin-top: -250px;
+    }
   }
 </style>
