@@ -177,24 +177,24 @@
       trigger: "#stockFotos",
       start: "top 50%",
       end: "top",
-      scrub: 3,
+      scrub: 1,
       /*       markers: true, */
     },
   });
 
   tl.fromTo(
     "#arbejde2_container",
-    { y: 1000, x: -1000, opacity: 0 },
-    { y: 0, x: 0, rotate: 7, opacity: 1, ease: "power1.inOut", duration: 2 }
+    { y: 100, x: -100, opacity: 0 },
+    { y: 0, x: 0, rotate: 7, opacity: 1, ease: "power1.inOut", duration: 1 }
   )
     .fromTo(
       "#arbejde1_container",
-      { y: -1000, x: -1000, opacity: 0 },
-      { y: 0, x: 0, rotate: 7, opacity: 1, ease: "power1.inOut", duration: 2 }
+      { y: -100, x: -100, opacity: 0 },
+      { y: 0, x: 0, rotate: 7, opacity: 1, ease: "power1.inOut", duration: 1 }
     )
     .fromTo(
       "#sammenhold_container",
-      { y: -1000, x: 1000, opacity: 0 },
-      { y: 0, x: 0, rotate: 7, opacity: 1, ease: "power1.inOut", duration: 2 }
+      { y: -100, x: 100, opacity: 0 },
+      { y: 0, x: 0, rotate: 7, opacity: 1, ease: "power1.inOut", duration: 1 }
     );
 </script>
