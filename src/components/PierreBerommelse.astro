@@ -1,43 +1,104 @@
 <!-- ********** Pierres Berømmelse ********** -->
 <section>
   <h3 id="h3-2" class="dymo">Pierres|berømmelse</h3>
+  <img src="../../public/assets/lines/streg1.svg" alt="en streg" id="streg1" />
   <p>
     Pierres interesse for foto startede som ganske ung - som 10-årig fik han sin fars gamle Rollei-kamera, og begyndte at skyde løs. Det var før den digitale revolution, så alle Pierres lommepenge blev brugt på filmruller og fremkaldelse af film.
     Pierre fortsatte med at fotografere på film op gennem gymnasietiden.
   </p>
-
-  <div class="polarid-fotos">
-    <img class="polarid-1" src="/public/assets/polariod/pb2.webp" alt="Pierres første kamera" />
-    <img class="polarid-2" src="/public/assets/polariod/pb1.webp" alt="Filmruller" />
+  <div id="stregOgFotos">
+    <div id="stregen">
+      <img src="../../public/assets/lines/streg2.svg" alt="en streg" id="streg2" />
+    </div>
+    <div id="polaroid2010">
+      <div class="polarid-fotos">
+        <img class="polarid-1" src="/public/assets/polariod/pb2.webp" alt="Pierres første kamera" />
+        <img class="polarid-2" src="/public/assets/polariod/pb1.webp" alt="Filmruller" />
+      </div>
+      <h3 id="tal2010">2010</h3>
+    </div>
   </div>
-  <h3 id="h3-1" class="dymo">2010</h3>
+
   <p>
     Pierre over til digital fotografering i starten af 2000’erne, da han begyndte at studere fotografisk kommunikation på DMJX. Her åbnede en ny verden sig: Reklamefotografering i studie, lyssætning og manipulering af billeder i Photoshop blev hans
     nye stil. På det tidspunkt var stock-foto industrien i starten af en revolution: De første online stock-foto websites begyndte at komme på markedet, men de store, etablerede spillere på markedet holdt lidt igen.
   </p>
-
+  <img src="../../public/assets/lines/streg3.svg" alt="en streg" id="streg3" />
   <p>
     Så Pierre gav sig selv en udfordring: At blive landets bedst sælgende stock-fotograf. Pierre lejede et gammelt, billigt erhvervslokale i Ishøj industri, fik fløjet billige skuespillere ind fra Polen og Baltikum, og fotograferede 10 timer om
     dagen. Pierres profeti om stock-foto branchen holdt stik. Pierre var allerede en af landets bedst sælgende stock-fotografer, før han blev færdig med studiet på DMJX.
   </p>
+  <img src="../../public/assets/lines/streg4.svg" alt="en streg" id="streg4" />
 </section>
 
 <style>
-  h3 {
-    margin-bottom: 1rem;
-  }
   section {
     display: flex;
     flex-direction: column;
-    gap: 8rem;
-    margin: 2rem;
+    /* gap: 8rem; */
+    margin: 2rem 2rem 0;
     align-items: center;
-    padding-bottom: 5rem;
+  }
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  #streg1 {
+    width: 26.545px;
+    height: 210px;
+  }
+
+  #streg2 {
+    width: 125px;
+    height: 1020.5px;
+  }
+
+  #streg3 {
+    width: 46.47px;
+    height: 242.5px;
+  }
+
+  #streg4 {
+    width: 43.888px;
+    height: 387.422px;
+    margin-bottom: -100px;
+  }
+
+  #stregOgFotos {
+    display: grid;
+  }
+  #stregen {
+    display: flex;
+    justify-content: center;
+    grid-area: 1/2/1/2;
+  }
+  #polaroid2010 {
+    grid-area: 1/2/1/2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .polarid-fotos {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+  }
+
+  #tal2010 {
+    transform: rotate(8.932deg);
+    margin-left: 20px;
+    color: var(--offBlack);
+    font-family: Dymo;
+    font-size: 3.3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    background-color: var(--dymoGray);
+    width: fit-content;
+    height: auto;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
   img {
