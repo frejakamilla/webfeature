@@ -1,25 +1,27 @@
 ---
-import LidtIFem from "../components/LidtIFem.astro";
 ---
 
 <!-- ********** En ny begyndelse ********** -->
-<section>
+<section class="overflow">
   <h3 class="dymo">En|ny|begyndelse</h3>
   <img src="../../public/assets/lines/streg1.svg" alt="en streg" id="streg1" />
   <p>
-    Men Pierre er glad for sin beslutning. Indkomsten er lavere nu, men han har stadig lidt penge på kontoen, og studerer nu kunstfotografering på fotoskolen Fatamorgana. Han glæder sig over hver dags kunstneriske eksperimenter, og er for første gang
-    i sit liv rigtig stolt af sit arbejde. Som Pierre selv udtrykker det: “Det interessante ligger i fejlen. Et foto med masser af fejl er interessant. Jeg eksperimenterer med udstyr og teknik, og skaber nye visuelle udtryk. Det uperfekte er
-    perfekt.”
+    Men Pierre er glad for sin beslutning. Indkomsten er lavere nu, men han har stadig lidt penge på kontoen, og
+    studerer nu kunstfotografering på fotoskolen Fatamorgana. Han glæder sig over hver dags kunstneriske eksperimenter,
+    og er for første gang i sit liv rigtig stolt af sit arbejde. Som Pierre selv udtrykker det: “Det interessante ligger
+    i fejlen. Et foto med masser af fejl er interessant. Jeg eksperimenterer med udstyr og teknik, og skaber nye
+    visuelle udtryk. Det uperfekte er perfekt.”
   </p>
   <img src="../../public/assets/lines/streg3.svg" alt="en streg" id="streg3" />
   <img class="vibrate-1" src="/public/assets/li5/bil.webp" alt="" />
   <img src="../../public/assets/lines/streg5.svg" alt="en streg" id="streg5" />
   <p>
-    Karrieren begynder også så småt også at gå den rette vej: Pierre er begyndt at sælge fotokunst på nettet, og har udgivet sin første foto-bog med titlen “Lidt i fem,” som er en fotografisk odyssé om at slæbe en brandert hjem i de tidlige
-    morgentimer. I forbindelse med udgivelsen af bogen, har han en udstilling på vej i det Kongelige Biblioteks fotoudstilling.
+    Karrieren begynder også så småt også at gå den rette vej: Pierre er begyndt at sælge fotokunst på nettet, og har
+    udgivet sin første foto-bog med titlen “Lidt i fem,” som er en fotografisk odyssé om at slæbe en brandert hjem i de
+    tidlige morgentimer. I forbindelse med udgivelsen af bogen, har han en udstilling på vej i det Kongelige Biblioteks
+    fotoudstilling.
   </p>
   <img src="../../public/assets/lines/streg6.svg" alt="en streg" id="streg6" />
-  <LidtIFem />
 </section>
 
 <style>
@@ -28,6 +30,10 @@ import LidtIFem from "../components/LidtIFem.astro";
     flex-direction: column;
     align-items: center;
     margin: 2rem;
+  }
+
+  .overflow {
+    overflow: hidden;
   }
 
   #streg1 {
