@@ -19,6 +19,15 @@ import LomoRegler from "./LomoRegler.astro";
 <style>
   #Carousel {
     display: inline-flex;
+    gap: 20px;
+    padding: 0 12px 0 12px;
+  }
+
+  @media (min-width: 900px) {
+    #Carousel {
+      gap: 0;
+      margin: 0;
+    }
   }
 </style>
 
@@ -28,6 +37,7 @@ import LomoRegler from "./LomoRegler.astro";
 
   gsap.registerPlugin(ScrollTrigger);
 
+  // if (screen.width > 900) {
   const carousel = document.querySelector(".carousel") as HTMLElement | null;
 
   // regner ud, hvor bred carousellen er,
@@ -44,15 +54,29 @@ import LomoRegler from "./LomoRegler.astro";
   });
 
   // finder sektionen .fotostilarter og bebynder vandret scroll
-  ScrollTrigger.create({
-    trigger: ".fotoStilarter",
-    start: "top 2%",
-    end: () => `+=${getScrollAmount() * -1}`,
-    pin: true,
-    animation: tween,
-    scrub: 1,
-    // hvis winduet genindlæses eller ændre størrelse, finder den karrusellens bredde igen
-    invalidateOnRefresh: true,
-    markers: true,
-  });
+  if (screen.width > 900) {
+    ScrollTrigger.create({
+      trigger: ".fotoStilarter",
+      start: "top 2%",
+      end: () => `+=${getScrollAmount() * -1}`,
+      pin: true,
+      animation: tween,
+      scrub: 1,
+      // hvis winduet genindlæses eller ændre størrelse, finder den karrusellens bredde igen
+      invalidateOnRefresh: true,
+      markers: true,
+    });
+  } else
+    ScrollTrigger.create({
+      trigger: ".fotoStilarter",
+      start: "top 10%",
+      end: () => `+=${getScrollAmount() * -1}`,
+      pin: true,
+      animation: tween,
+      scrub: 1,
+      // hvis winduet genindlæses eller ændre størrelse, finder den karrusellens bredde igen
+      invalidateOnRefresh: true,
+      markers: true,
+    });
+  // }
 </script>
