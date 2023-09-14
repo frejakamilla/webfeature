@@ -4,13 +4,28 @@
 <section id="stockFotos">
   <div id="img_container">
     <div id="arbejde2_container" class="stock-foto">
-      <img src="../../public/assets/stockimg/stock2.webp" alt="et stockfoto ved navn arbejde, af to kvinder ved en bærbarcomputer" class="horizontal" id="arbejde1" />
+      <img
+        src="../../public/assets/stockimg/stock2.webp"
+        alt="et stockfoto ved navn arbejde, af to kvinder ved en bærbarcomputer"
+        class="horizontal"
+        id="arbejde1"
+      />
     </div>
     <div id="arbejde1_container" class="stock-foto">
-      <img src="../../public/assets/stockimg/stock3.webp" alt="et stockfoto ved navn arbejde, af en gruppe kollegaer omkring en bærbarcomputer" class="horizontal" id="arbejde2" />
+      <img
+        src="../../public/assets/stockimg/stock3.webp"
+        alt="et stockfoto ved navn arbejde, af en gruppe kollegaer omkring en bærbarcomputer"
+        class="horizontal"
+        id="arbejde2"
+      />
     </div>
     <div id="sammenhold_container" class="stock-foto">
-      <img src="../../public/assets/stockimg/stock1.webp" alt="et stockfoto ved navn sammenhold, af fire hænder der holder hinandens håndled" class="vertical" id="sammenhold" />
+      <img
+        src="../../public/assets/stockimg/stock1.webp"
+        alt="et stockfoto ved navn sammenhold, af fire hænder der holder hinandens håndled"
+        class="vertical"
+        id="sammenhold"
+      />
     </div>
   </div>
 </section>
@@ -21,7 +36,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    /*     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
+  }
+
+  .horizontal,
+  .vertical {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
   }
   #img_container {
     width: 60%;
@@ -70,7 +90,7 @@
   #arbejde2 {
     transform: rotate(7.004deg);
   }
-
+  /* 
   @-webkit-keyframes slide-in-tr {
     0% {
       -webkit-transform: translateY(-1000px) translateX(1000px);
@@ -142,5 +162,39 @@
       transform: translateY(0) translateX(0);
       opacity: 1;
     }
-  }
+  } */
 </style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const tl = gsap.timeline({
+    duration: 2,
+    scrollTrigger: {
+      trigger: "#stockFotos",
+      start: "top 50%",
+      end: "top",
+      scrub: 3,
+      /*       markers: true, */
+    },
+  });
+
+  tl.fromTo(
+    "#arbejde2_container",
+    { y: 1000, x: -1000, opacity: 0 },
+    { y: 0, x: 0, rotate: 7, opacity: 1, ease: "power1.inOut", duration: 2 }
+  )
+    .fromTo(
+      "#arbejde1_container",
+      { y: -1000, x: -1000, opacity: 0 },
+      { y: 0, x: 0, rotate: 7, opacity: 1, ease: "power1.inOut", duration: 2 }
+    )
+    .fromTo(
+      "#sammenhold_container",
+      { y: -1000, x: 1000, opacity: 0 },
+      { y: 0, x: 0, rotate: 7, opacity: 1, ease: "power1.inOut", duration: 2 }
+    );
+</script>
