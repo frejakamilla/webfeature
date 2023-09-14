@@ -3,7 +3,7 @@ import PolaridPierre from "../components/PolaridPierre.astro";
 ---
 
 <!-- ********** Intro ********** -->
-<section>
+<section class="about-pierre">
   <div class="about-text">
     <p class="dymo h2">Pierre|Falcke.</p>
     <p class="text">
@@ -78,8 +78,11 @@ import PolaridPierre from "../components/PolaridPierre.astro";
     gsap.from(".dymo", {
       y: -30,
       duration: 5,
-      id: "",
-      scrollTrigger: ".dymo",
+      scrollTrigger: {
+        trigger: ".dymo",
+        scrub: 2,
+        markers: true,
+      },
     });
   });
 </script>
