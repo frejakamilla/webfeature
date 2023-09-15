@@ -4,16 +4,14 @@
 <section id="lidtiFem" class="lidt-i-fem">
   <div id="img-container">
     <div id="container-1" class="element">
-      <img id="foto1" class="horizontal" src="/public/assets/li5/mcd.webp" alt="" />
+      <img id="foto1" class="horizontal" src="/assets/li5/mcd.webp" alt="" />
     </div>
     <div id="container-2" class="element paper-citat">
-      <img class="horizontal-paper" id="paper" src="/public/assets/paper/paper-lidt-i-fem.png" alt="" />
-      <p class="citat text_on_paper">
-        “Nu kan jeg leve livet igen. Jeg føler mig frisk. Jeg føler mig fri. Jeg føler mig genfødt.” - Pierre Falcke
-      </p>
+      <img class="horizontal-paper" id="paper" src="/assets/paper/paper-lidt-i-fem.png" alt="" />
+      <p class="citat text_on_paper">“Nu kan jeg leve livet igen. Jeg føler mig frisk. Jeg føler mig fri. Jeg føler mig genfødt.” - Pierre Falcke</p>
     </div>
     <div id="container-3" class="element">
-      <img class="vertical" id="foto2" src="/public/assets/li5/nih.webp" alt="" />
+      <img class="vertical" id="foto2" src="/assets/li5/nih.webp" alt="" />
     </div>
   </div>
 </section>
@@ -320,21 +318,9 @@
     },
   });
 
-  tl.fromTo(
-    "#container-1",
-    { rotateY: -20, rotateX: 35, y: -300, x: 300, skewX: -35, skewY: 10, opacity: 0 },
-    { rotateY: 0, rotateX: 0, y: -300, x: -100, skewX: 0, skewY: 0, opacity: 1, ease: "power1.inOut", duration: 2 }
-  )
-    .fromTo(
-      "#container-2",
-      { rotateY: 20, rotateX: 35, y: -300, x: 300, skewX: -35, skewY: 10, opacity: 0 },
-      { rotateY: 0, rotateX: 0, y: -200, x: -600, skewX: 0, skewY: 0, opacity: 1, ease: "power1.inOut", duration: 2 }
-    )
-    .fromTo(
-      "#container-3",
-      { rotateY: 20, rotateX: -35, y: 300, x: 300, skewX: -35, skewY: -10, opacity: 0 },
-      { rotateY: 0, rotateX: 0, y: 0, x: -100, skewX: 0, skewY: 0, opacity: 1, ease: "power1.inOut", duration: 2 }
-    );
+  tl.fromTo("#container-1", { rotateY: -20, rotateX: 35, y: -300, x: 300, skewX: -35, skewY: 10, opacity: 0 }, { rotateY: 0, rotateX: 0, y: -300, x: -100, skewX: 0, skewY: 0, opacity: 1, ease: "power1.inOut", duration: 2 })
+    .fromTo("#container-2", { rotateY: 20, rotateX: 35, y: -300, x: 300, skewX: -35, skewY: 10, opacity: 0 }, { rotateY: 0, rotateX: 0, y: -200, x: -600, skewX: 0, skewY: 0, opacity: 1, ease: "power1.inOut", duration: 2 })
+    .fromTo("#container-3", { rotateY: 20, rotateX: -35, y: 300, x: 300, skewX: -35, skewY: -10, opacity: 0 }, { rotateY: 0, rotateX: 0, y: 0, x: -100, skewX: 0, skewY: 0, opacity: 1, ease: "power1.inOut", duration: 2 });
 </script>
 
 <!-- /

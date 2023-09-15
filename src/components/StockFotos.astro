@@ -4,28 +4,13 @@
 <section id="stockFotos">
   <div id="img_container">
     <div id="arbejde2_container" class="stock-foto">
-      <img
-        src="../../public/assets/stockimg/stock2.webp"
-        alt="et stockfoto ved navn arbejde, af to kvinder ved en bærbarcomputer"
-        class="horizontal"
-        id="arbejde1"
-      />
+      <img src="/assets/stockimg/stock2.webp" alt="et stockfoto ved navn arbejde, af to kvinder ved en bærbarcomputer" class="horizontal" id="arbejde1" />
     </div>
     <div id="arbejde1_container" class="stock-foto">
-      <img
-        src="../../public/assets/stockimg/stock3.webp"
-        alt="et stockfoto ved navn arbejde, af en gruppe kollegaer omkring en bærbarcomputer"
-        class="horizontal"
-        id="arbejde2"
-      />
+      <img src="/assets/stockimg/stock3.webp" alt="et stockfoto ved navn arbejde, af en gruppe kollegaer omkring en bærbarcomputer" class="horizontal" id="arbejde2" />
     </div>
     <div id="sammenhold_container" class="stock-foto">
-      <img
-        src="../../public/assets/stockimg/stock1.webp"
-        alt="et stockfoto ved navn sammenhold, af fire hænder der holder hinandens håndled"
-        class="vertical"
-        id="sammenhold"
-      />
+      <img src="/assets/stockimg/stock1.webp" alt="et stockfoto ved navn sammenhold, af fire hænder der holder hinandens håndled" class="vertical" id="sammenhold" />
     </div>
   </div>
 </section>
@@ -182,19 +167,7 @@
     },
   });
 
-  tl.fromTo(
-    "#arbejde2_container",
-    { y: 100, x: -100, opacity: 0 },
-    { y: 0, x: 0, rotate: 7, opacity: 1, ease: "power1.inOut", duration: 1 }
-  )
-    .fromTo(
-      "#arbejde1_container",
-      { y: -100, x: -100, opacity: 0 },
-      { y: 0, x: 0, rotate: 7, opacity: 1, ease: "power1.inOut", duration: 1 }
-    )
-    .fromTo(
-      "#sammenhold_container",
-      { y: -100, x: 100, opacity: 0 },
-      { y: 0, x: 0, rotate: 7, opacity: 1, ease: "power1.inOut", duration: 1 }
-    );
+  tl.fromTo("#arbejde2_container", { y: 100, x: -100, opacity: 0 }, { y: 0, x: 0, rotate: 7, opacity: 1, ease: "power1.inOut", duration: 1 })
+    .fromTo("#arbejde1_container", { y: -100, x: -100, opacity: 0 }, { y: 0, x: 0, rotate: 7, opacity: 1, ease: "power1.inOut", duration: 1 })
+    .fromTo("#sammenhold_container", { y: -100, x: 100, opacity: 0 }, { y: 0, x: 0, rotate: 7, opacity: 1, ease: "power1.inOut", duration: 1 });
 </script>
